@@ -109,7 +109,9 @@ body {
 .hero {
     margin-top: 60px;
     min-height: calc(100vh - 60px);
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,8 +127,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="rgba(233,69,96,0.1)"/></pattern></defs><rect width="1200" height="600" fill="url(%23dots)"/></svg>');
-    opacity: 0.5;
+    background-color: rgba(26, 26, 46, 0.7); /* Dark overlay for text readability */
+    z-index: 0;
 }
 
 .hero-content {
@@ -190,9 +192,22 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr; /* Adjusted for image and text */
     gap: 3rem;
     align-items: center;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 5px solid var(--accent-color);
 }
 
 .about-text p {
@@ -613,6 +628,10 @@ body {
 
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        max-width: 200px;
     }
 
     .about-stats {
