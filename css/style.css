@@ -438,6 +438,7 @@ body {
 
 .events-list {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
@@ -663,9 +664,6 @@ body {
     .contact-content {
         grid-template-columns: 1fr;
     }
-
-    .event-card {
-        flex-direction: column;
     }
 
     .player-content {
