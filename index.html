@@ -18,7 +18,7 @@
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#portfolio">Past Events</a></li>
                     <li><a href="#events">Events</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -34,8 +34,15 @@
     <!-- Hero Section -->
     <section id="home" class="hero" style="background-image: url('images/hero-bg.jpg');">
         <div class="hero-content">
-            <h1>Fresh Beats, African Vibes</h1>
-            <p>Bringing Afrobeat & African Culture to the Floor</p>
+            <h1>The OUTSIDER Experience</h1>
+            <p>A Blend of Musical Genres</p>
+            <div class="music-genres">
+                <span>Afrobeat</span>
+                <span>Dancehall</span>
+                <span>Amapiano</span>
+                <span>Hip-Hop</span>
+                <span>R&B</span>
+            </div>
             <a href="#contact" class="btn btn-primary">Book Now</a>
         </div>
     </section>
@@ -49,7 +56,7 @@
                     <img src="images/about-profile.jpg" alt="DJ Profile Picture">
                 </div>
                 <div class="about-text">
-                    <p>I'm a passionate Nigerian DJ dedicated to bringing the fresh blend of music, Afrobeat, and African culture to every event. My mission is to create unforgettable experiences by curating sets that celebrate the richness and energy of African sounds while keeping the crowd engaged and the vibe alive.</p>
+                    <p>I'm a passionate DJ based in Nairobi, dedicated to bringing the fresh blend of music, vibe, culture, and energy to every event. My mission is to create unforgettable OUTSIDER experiences by curating sets that celebrate the richness and energy, breaking away from the traditional music experience into how music should be experienced while keeping the crowd engaged and the vibe alive.</p>
                     <p>Whether it's a club night, private event, or festival performance, I blend traditional African rhythms with contemporary beats to create a unique sonic experience that resonates with diverse audiences. Every set is crafted with intention, bringing authenticity and energy to the dance floor.</p>
                 </div>
             </div>
@@ -62,58 +69,106 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Past Events Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>My Mixes & Tracks</h2>
+            <h2>Past Events</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/mix-1.jpg" alt="Mix 1">
+                        <img src="images/event-1.png" alt="Road to African Experience">
                         <div class="overlay">
-                            <button class="play-btn" onclick="playMix('https://example.com/mix1.mp3')">
-                                <i class="fas fa-play"></i>
+                            <button class="play-btn" onclick="viewEvent('images/event-7.png')">
+                                <i class="fas fa-expand"></i>
                             </button>
                         </div>
                     </div>
-                    <h3>Afrobeat Sessions</h3>
-                    <p>Afrobeat & African Vibes</p>
+                    <h3>Road to African Experience</h3>
+                    <p>September 20, 2025</p>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/mix-2.jpg" alt="Mix 2">
+                        <img src="images/event-2.png" alt="3/10 Friday - The Red Ritual">
                         <div class="overlay">
-                            <button class="play-btn" onclick="playMix('https://example.com/mix2.mp3')">
-                                <i class="fas fa-play"></i>
+                            <button class="play-btn" onclick="viewEvent('images/event-5.png')">
+                                <i class="fas fa-expand"></i>
                             </button>
                         </div>
                     </div>
-                    <h3>Club Nights Live</h3>
-                    <p>High Energy Mixes</p>
+                    <h3>3/10 Friday - The Red Ritual</h3>
+                    <p>October 3, 2025</p>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/mix-3.jpg" alt="Mix 3">
+                        <img src="images/event-3.png" alt="Mr & Miss USIU-Africa 2025">
                         <div class="overlay">
-                            <button class="play-btn" onclick="playMix('https://example.com/mix3.mp3')">
-                                <i class="fas fa-play"></i>
+                            <button class="play-btn" onclick="viewEvent('images/event-2.png')">
+                                <i class="fas fa-expand"></i>
                             </button>
                         </div>
                     </div>
-                    <h3>Fusion Beats</h3>
-                    <p>African & Contemporary</p>
+                    <h3>Mr & Miss USIU-Africa 2025</h3>
+                    <p>October 30, 2025</p>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/mix-4.jpg" alt="Mix 4">
+                        <img src="images/event-4.jpg" alt="Studio 1 Event">
                         <div class="overlay">
-                            <button class="play-btn" onclick="playMix('https://example.com/mix4.mp3')">
-                                <i class="fas fa-play"></i>
+                            <button class="play-btn" onclick="viewEvent('images/event-1.jpg')">
+                                <i class="fas fa-expand"></i>
                             </button>
                         </div>
                     </div>
-                    <h3>Festival Vibes</h3>
-                    <p>Energetic & Uplifting</p>
+                    <h3>Studio 1</h3>
+                    <p>September 3, 2025</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/event-5.png" alt="Eclipse Thursday">
+                        <div class="overlay">
+                            <button class="play-btn" onclick="viewEvent('images/event-6.png')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>Eclipse Thursday</h3>
+                    <p>September 18, 2025</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/event-6.png" alt="The Bando House Arrest">
+                        <div class="overlay">
+                            <button class="play-btn" onclick="viewEvent('images/event-4.png')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>The Bando House Arrest</h3>
+                    <p>June 21, 2025</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/event-7.png" alt="Haunted Night">
+                        <div class="overlay">
+                            <button class="play-btn" onclick="viewEvent('images/event-3.png')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>Haunted Night</h3>
+                    <p>November 1, 2025</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/event-9.png" alt="Tequila Thursday">
+                        <div class="overlay">
+                            <button class="play-btn" onclick="viewEvent('images/event-8.png')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>Tequila Thursday</h3>
+                    <p>Zeytoon Lounge</p>
                 </div>
             </div>
         </div>
