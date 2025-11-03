@@ -130,11 +130,13 @@ body {
     background-color: rgba(26, 26, 46, 0.7); /* Dark overlay for text readability */
     z-index: 0;
 }
-
 .hero-content {
     position: relative;
     z-index: 1;
     animation: fadeInUp 1s ease-out;
+    align-self: flex-start; /* place content at the top of the .hero flex container */
+    padding-top: 17rem; /* adjust spacing from the top as needed */
+    text-align: center; /* keep horizontal centering; change to left if you want left-aligned text */
 }
 
 .hero h1 {
@@ -440,6 +442,45 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+    margin-bottom: 4rem; /* Add space before the new sections */
+}
+
+.rate-card-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-section h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-section li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    color: var(--light-text);
+    line-height: 1.5;
+}
+
+.detail-section li i {
+    color: var(--accent-color);
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    min-width: 20px;
+    text-align: center;
+    padding-top: 3px;
 }
 
 .event-card {
@@ -681,7 +722,6 @@ body {
     .contact h2 {
         font-size: 2rem;
     }
-}
 
 @media (max-width: 480px) {
     .hero h1 {
