@@ -116,6 +116,32 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// ===== Accordion Toggle Function =====
+function toggleAccordion(header) {
+    const item = header.parentElement;
+    const content = header.nextElementSibling;
+
+    if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        content.style.maxHeight = null;
+    } else {
+        // Close all other open accordions in the same rate-card-details container
+        const container = item.closest('.rate-card-details');
+        if (container) {
+            container.querySelectorAll('.accordion-item.active').forEach(openItem => {
+                if (openItem !== item) {
+                    openItem.classList.remove('active');
+                    openItem.querySelector('.accordion-content').style.maxHeight = null;
+                }
+            });
+        }
+
+        // Open the clicked accordion
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+}
+
 // ===== Contact Form Submission =====
 function handleFormSubmit(event) {
     event.preventDefault();

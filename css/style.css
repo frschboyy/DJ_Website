@@ -130,13 +130,27 @@ body {
     background-color: rgba(26, 26, 46, 0.7); /* Dark overlay for text readability */
     z-index: 0;
 }
+
 .hero-content {
     position: relative;
     z-index: 1;
     animation: fadeInUp 1s ease-out;
-    align-self: flex-start; /* place content at the top of the .hero flex container */
-    padding-top: 17rem; /* adjust spacing from the top as needed */
-    text-align: center; /* keep horizontal centering; change to left if you want left-aligned text */
+    align-self: flex-start;
+    padding: 17rem 2rem 2rem 2rem; /* Added padding on all sides */
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Prevent content from stretching too wide */
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding-bottom: 5rem; /* Extra padding for mobile */
+    }
+
+    .about-text p {
+        font-size: 1rem !important; /* Smaller font size for about text on mobile */
+    }
 }
 
 .hero h1 {
@@ -212,9 +226,10 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Adjusted for image and text */
+    grid-template-columns: 1fr 2fr;
     gap: 3rem;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .about-image {
@@ -234,6 +249,7 @@ body {
     margin-bottom: 1.5rem;
     color: var(--light-text);
     line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 .about-stats {
@@ -437,12 +453,151 @@ body {
     margin-bottom: 3rem;
     color: var(--accent-color);
 }
-
 .events-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-bottom: 4rem; /* Add space before the new sections */
+}
+
+.rate-card-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-item {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(233, 69, 96, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: rgba(233, 69, 96, 0.2);
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.accordion-header i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1.5rem;
+}
+
+.accordion-content ul {
+    list-style: none;
+    padding: 1.5rem 0;
+    margin: 0;
+}
+
+.accordion-content li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    color: var(--light-text);
+    line-height: 1.5;
+}
+
+.accordion-content li i {
+    color: var(--accent-color);
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    min-width: 20px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+/* Hide accordion on desktop, show grid */
+@media (min-width: 769px) {
+    .accordion-item {
+        display: none;
+    }
+
+    .rate-card-details {
+        display: grid;
+    }
+
+    .detail-section {
+        /* Re-introduce the desktop-only structure */
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .detail-section h3 {
+        font-size: 1.5rem;
+        color: var(--accent-color);
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+        padding-bottom: 0.5rem;
+    }
+
+    .detail-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .detail-section li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        color: var(--light-text);
+        line-height: 1.5;
+    }
+
+    .detail-section li i {
+        color: var(--accent-color);
+        margin-right: 1rem;
+        font-size: 1.1rem;
+        min-width: 20px;
+        text-align: center;
+        padding-top: 3px;
+    }
+}
+
+/* Show accordion on mobile, hide grid */
+@media (max-width: 768px) {
+    .rate-card-details {
+        display: block; /* Stack accordion items */
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    .accordion-item {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .detail-section {
+        display: none;
+    }
+}    margin-bottom: 4rem; /* Add space before the new sections */
 }
 
 .rate-card-details {
@@ -679,15 +834,26 @@ body {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .hero p {
         font-size: 1.1rem;
     }
 
+    .hero-content {
+        padding: 12rem 1.5rem 2rem 1.5rem;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
     }
 
     .about-image img {
@@ -724,8 +890,19 @@ body {
     }
 
 @media (max-width: 480px) {
+    .about-text p {
+        font-size: 0.7rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+        padding: 0 0.5rem;
+    }
+
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.5em;
+    }
+
+    .hero-content {
+        padding-top: 10rem; /* Reduce top padding on mobile */
     }
 
     .hero p {
