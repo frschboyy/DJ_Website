@@ -26,6 +26,20 @@ body {
     overflow-x: hidden;
 }
 
+/* Ensure all main content is above the background effects (z-index: 1 is for the background, 10+ for content) */
+body > * {
+    position: relative;
+    z-index: 10;
+}
+
+.navbar {
+    z-index: 1000 !important; /* Ensure navbar is always on top */
+}
+
+.hero::before {
+    z-index: 0; /* Keep the hero overlay below the content */
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;

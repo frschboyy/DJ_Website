@@ -1,0 +1,629 @@
+/* ===== Background Particle and Star Effects ===== */
+
+/* Glittering Stars Background */
+.stars-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.star.small {
+    width: 1px;
+    height: 1px;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.star.medium {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.star.large {
+    width: 3px;
+    height: 3px;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
+}
+
+/* Twinkling animation for stars */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes twinkleSlow {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes twinkleFast {
+    0%, 100% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.star.twinkle-slow {
+    animation: twinkleSlow 3s ease-in-out infinite;
+}
+
+.star.twinkle-medium {
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.star.twinkle-fast {
+    animation: twinkleFast 1s ease-in-out infinite;
+}
+
+/* Floating Particles Background */
+.particles-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(233, 69, 96, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(233, 69, 96, 0.4);
+}
+
+.particle.small {
+    width: 2px;
+    height: 2px;
+    background-color: rgba(233, 69, 96, 0.2);
+    box-shadow: 0 0 3px rgba(233, 69, 96, 0.3);
+}
+
+.particle.medium {
+    width: 4px;
+    height: 4px;
+    background-color: rgba(233, 69, 96, 0.3);
+    box-shadow: 0 0 6px rgba(233, 69, 96, 0.4);
+}
+
+.particle.large {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(233, 69, 96, 0.4);
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.5);
+}
+
+/* Floating animation for particles */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes floatLeft {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes floatWide {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(150px);
+        opacity: 0;
+    }
+}
+
+.particle.float-slow {
+    animation: float 8s linear infinite;
+}
+
+.particle.float-medium {
+    animation: float 6s linear infinite;
+}
+
+.particle.float-fast {
+    animation: float 4s linear infinite;
+}
+
+.particle.float-left-slow {
+    animation: floatLeft 8s linear infinite;
+}
+
+.particle.float-left-medium {
+    animation: floatLeft 6s linear infinite;
+}
+
+.particle.float-left-fast {
+    animation: floatLeft 4s linear infinite;
+}
+
+.particle.float-wide-slow {
+    animation: floatWide 10s linear infinite;
+}
+
+.particle.float-wide-medium {
+    animation: floatWide 8s linear infinite;
+}
+
+.particle.float-wide-fast {
+    animation: floatWide 6s linear infinite;
+}
+
+/* Pulse animation for particles */
+@keyframes particlePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+}
+
+.particle.pulse-slow {
+    animation: particlePulse 3s ease-in-out infinite;
+}
+
+.particle.pulse-medium {
+    animation: particlePulse 2s ease-in-out infinite;
+}
+
+.particle.pulse-fast {
+    animation: particlePulse 1s ease-in-out infinite;
+}
+
+/* Glow animation for particles */
+@keyframes particleGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(233, 69, 96, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(233, 69, 96, 0.7);
+    }
+}
+
+.particle.glow-slow {
+    animation: particleGlow 3s ease-in-out infinite;
+}
+
+.particle.glow-medium {
+    animation: particleGlow 2s ease-in-out infinite;
+}
+
+.particle.glow-fast {
+    animation: particleGlow 1s ease-in-out infinite;
+}
+
+/* Ambient Motion Background */
+.ambient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), #10101d, #16213e);
+    background-size: 400% 400%;
+    animation: ambientShift 15s ease infinite;
+}
+
+@keyframes ambientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Orbs Background */
+.orbs-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(233, 69, 96, 0.3), rgba(233, 69, 96, 0.05));
+    filter: blur(40px);
+}
+
+.orb.small {
+    width: 100px;
+    height: 100px;
+}
+
+.orb.medium {
+    width: 200px;
+    height: 200px;
+}
+
+.orb.large {
+    width: 300px;
+    height: 300px;
+}
+
+/* Orb floating animation */
+@keyframes orbFloat {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(30px, -30px);
+    }
+    50% {
+        transform: translate(0, -60px);
+    }
+    75% {
+        transform: translate(-30px, -30px);
+    }
+}
+
+.orb.float-slow {
+    animation: orbFloat 20s ease-in-out infinite;
+}
+
+.orb.float-medium {
+    animation: orbFloat 15s ease-in-out infinite;
+}
+
+.orb.float-fast {
+    animation: orbFloat 10s ease-in-out infinite;
+}
+
+/* Soft Gradient Mesh Background */
+.mesh-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(233, 69, 96, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(100, 150, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(100, 200, 150, 0.1) 0%, transparent 50%);
+    background-size: 200% 200%;
+    animation: meshShift 20s ease infinite;
+}
+
+@keyframes meshShift {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Animated Grid Background */
+.grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+        linear-gradient(rgba(233, 69, 96, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(233, 69, 96, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+/* Animated Wave Background */
+.wave-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(233,69,96,0.1)"></path></svg>') repeat-x;
+    animation: wave 15s linear infinite;
+}
+
+.wave:nth-child(2) {
+    bottom: 10px;
+    animation: wave 10s linear infinite reverse;
+    opacity: 0.5;
+}
+
+.wave:nth-child(3) {
+    bottom: 20px;
+    animation: wave 15s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 600px 0;
+    }
+}
+
+/* Animated Lines Background */
+.lines-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, rgba(233, 69, 96, 0.2), transparent);
+    animation: lineMove 4s ease-in-out infinite;
+}
+
+.line.horizontal {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.line.vertical {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+}
+
+@keyframes lineMove {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Animated Dots Background */
+.dots-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: radial-gradient(circle, rgba(233, 69, 96, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: dotsShift 20s linear infinite;
+}
+
+@keyframes dotsShift {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+/* Animated Bubbles Background */
+.bubbles-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    border: 1px solid rgba(233, 69, 96, 0.2);
+    border-radius: 50%;
+    background: transparent;
+}
+
+.bubble.small {
+    width: 20px;
+    height: 20px;
+}
+
+.bubble.medium {
+    width: 50px;
+    height: 50px;
+}
+
+.bubble.large {
+    width: 100px;
+    height: 100px;
+}
+
+/* Bubble floating animation */
+@keyframes bubbleFloat {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50px);
+        opacity: 0;
+    }
+}
+
+.bubble.float-slow {
+    animation: bubbleFloat 8s linear infinite;
+}
+
+.bubble.float-medium {
+    animation: bubbleFloat 6s linear infinite;
+}
+
+.bubble.float-fast {
+    animation: bubbleFloat 4s linear infinite;
+}
+
+/* Animated Gradient Shift */
+.gradient-shift-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), #10101d, #16213e);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animated Noise Background */
+.noise-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/></filter><rect width="100" height="100" fill="rgba(233,69,96,0.05)" filter="url(%23noise)"/></svg>');
+    background-size: 100px 100px;
+    animation: noiseShift 5s linear infinite;
+}
+
+@keyframes noiseShift {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+/* Content wrapper to ensure content is above background effects */
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+/* Ensure all main sections are above the background */
+body > * {
+    position: relative;
+    z-index: 10;
+}
+
+nav, section, footer {
+    position: relative;
+    z-index: 10;
+}
