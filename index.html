@@ -430,9 +430,9 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/myzbqpng" method="POST">
+                <form class="contact-form" name="contact" method="POST" data-netlify="true">
                     <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
                     <input type="text" name="event_type" placeholder="Event Type" required>
                     <textarea name="message" placeholder="Tell me about your event..." rows="5" required></textarea>
                     <button type="submit" class="btn btn-primary">Send Message</button>
