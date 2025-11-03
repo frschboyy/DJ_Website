@@ -430,8 +430,9 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/success.html">
-                        <input type="hidden" name="_to" value="frchianu5@gmail.com">
+                <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="_next" value="/success.html">
+                    <input type="hidden" name="_to" value="frchianu5@gmail.com">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="text" name="event_type" placeholder="Event Type" required>
