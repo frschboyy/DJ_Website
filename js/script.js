@@ -42,79 +42,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// ===== Audio Player =====
-let currentAudio = null;
-let isPlaying = false;
 
-function playMix(url) {
-    const player = document.getElementById('audioPlayer');
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    const currentTrack = document.getElementById('currentTrack');
-    
-    // Stop current audio if playing
-    if (currentAudio) {
-        currentAudio.pause();
-    }
-    
-    // Create new audio element
-    currentAudio = new Audio(url);
-    currentTrack.textContent = 'Now Playing: ' + url.split('/').pop();
-    
-    // Show player
-    player.classList.add('active');
-    
-    // Play audio
-    currentAudio.play();
-    isPlaying = true;
-    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-    
-    // Update progress bar
-    currentAudio.addEventListener('timeupdate', () => {
-        const progress = (currentAudio.currentTime / currentAudio.duration) * 100;
-        document.getElementById('progress').style.width = progress + '%';
-    });
-    
-    // Handle audio end
-    currentAudio.addEventListener('ended', () => {
-        isPlaying = false;
-        playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-    });
-}
-
-function togglePlay() {
-    if (!currentAudio) return;
-    
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    
-    if (isPlaying) {
-        currentAudio.pause();
-        isPlaying = false;
-        playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-    } else {
-        currentAudio.play();
-        isPlaying = true;
-        playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-    }
-}
-
-function closePlayer() {
-    const player = document.getElementById('audioPlayer');
-    if (currentAudio) {
-        currentAudio.pause();
-    }
-    player.classList.remove('active');
-    isPlaying = false;
-}
-
-// Click on progress bar to seek
-document.addEventListener('click', (e) => {
-    if (e.target.closest('.progress-bar') && currentAudio) {
-        const progressBar = document.querySelector('.progress-bar');
-        const rect = progressBar.getBoundingClientRect();
-        const percent = (e.clientX - rect.left) / rect.width;
-        currentAudio.currentTime = percent * currentAudio.duration;
-    }
-});
 
 // ===== Accordion Toggle Function =====
 function toggleAccordion(header) {

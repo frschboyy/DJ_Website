@@ -181,24 +181,16 @@
         </div>
     </section>
 
-    <!-- Audio Player -->
-    <div id="audioPlayer" class="audio-player">
-        <div class="player-content">
-            <div class="player-info">
-                <span id="currentTrack">Now Playing</span>
-            </div>
-            <div class="player-controls">
-                <button id="playPauseBtn" onclick="togglePlay()">
-                    <i class="fas fa-play"></i>
-                </button>
-                <div class="progress-bar">
-                    <div id="progress" class="progress"></div>
-                </div>
-                <button onclick="closePlayer()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
+    <!-- Spotify Playlist Embed -->
+    <div id="spotifyPlayer" class="spotify-player">
+        <iframe style="border-radius:12px; opacity: 0.4;" 
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1EQqFPe2ux3rbj?utm_source=generator&theme=0"
+            width="60%" 
+            height="60" 
+            frameBorder="0" 
+            allow="autoplay" 
+            loading="lazy">
+        </iframe>
     </div>
 
     <!-- Events Section -->
