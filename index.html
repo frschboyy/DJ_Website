@@ -183,13 +183,9 @@
 
     <!-- Spotify Playlist Embed -->
     <div id="spotifyPlayer" class="spotify-player">
-        <iframe style="border-radius:12px; opacity: 0.4;" 
+        <iframe style="border-radius:12px; opacity: 0.4;"
             src="https://open.spotify.com/embed/playlist/37i9dQZF1EQqFPe2ux3rbj?utm_source=generator&theme=0"
-            width="60%" 
-            height="60" 
-            frameBorder="0" 
-            allow="autoplay" 
-            loading="lazy">
+            width="60%" height="60" frameBorder="0" allow="autoplay" loading="lazy">
         </iframe>
     </div>
 
@@ -331,7 +327,7 @@
                         </ul>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div class="rate-card-details">
@@ -423,13 +419,17 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" name="contact" method="POST" data-netlify="true">
-                    <input type="hidden" name="_next" value="/success.html">
-                    <input type="hidden" name="_to" value="frchianu5@gmail.com">
+                <form name="contact" method="POST" data-netlify="true">
+                    <!-- <input type="hidden" name="_next" value="/success.html"> -->
+                    <!-- <input type="hidden" name="_to" value="frchianu5@gmail.com"> -->
+                     
+                    <input type="hidden" name="form-name" value="contact">
+
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="event_type" placeholder="Event Type" required>
+                    <input type="text" name="subject" placeholder="Event Type" required>
                     <textarea name="message" placeholder="Tell me about your event..." rows="5" required></textarea>
+
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
@@ -441,7 +441,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="social-links">
-                    <a href="https://www.instagram.com/prodbyariell" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/prodbyariell" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                     <a href="https://soundcloud.com" target="_blank"><i class="fab fa-soundcloud"></i></a>
                     <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
                     <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
