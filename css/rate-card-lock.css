@@ -1,0 +1,123 @@
+/* Rate Card Lock Styles */
+.rate-card-lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 50;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.rate-card-lock-overlay.unlocked {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.lock-icon {
+    font-size: 6rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.lock-prompt {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.lock-input {
+    padding: 12px 15px;
+    border: 2px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 250px;
+    max-width: 90%;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.lock-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: normal;
+}
+
+.lock-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+    border-color: #ffff00;
+}
+
+/* Animation for the lock icon */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 204, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
+    }
+}
+
+/* Style for the rate card section */
+#events {
+    position: relative;
+}
+
+/* Initially hide the content */
+.rate-card-content {
+    display: none;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.rate-card-content.visible {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .lock-icon {
+        font-size: 4rem;
+    }
+    
+    .lock-prompt {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+    
+    .lock-input {
+        width: 200px;
+        font-size: 1rem;
+    }
+}

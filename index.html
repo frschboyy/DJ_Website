@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/events-enhanced.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/rate-card-lock.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -67,12 +68,6 @@
                         engaged and the vibe alive.</p>
                 </div>
             </div>
-            <!-- <div class="about-stats">
-                <div class="stat">
-                    <h3>50+</h3>
-                    <p>Events Performed</p>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -90,8 +85,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <h3>Road to African Experience</h3>
-                    <p>September 20, 2025</p> -->
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -102,8 +95,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <h3>Friday - The Red Ritual</h3>
-                    <p>October 3, 2025</p> -->
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -114,8 +105,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <h3>Mr & Miss USIU-Africa 2025</h3>
-                    <p>October 30, 2025</p> -->
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -126,8 +115,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <h3>Studio 1</h3>
-                    <p>September 3, 2025</p> -->
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -138,8 +125,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <h3>Eclipse Thursday</h3>
-                    <p>September 18, 2025</p> -->
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -150,8 +135,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <h3>The Bando House Arrest</h3>
-                    <p>June 21, 2025</p> -->
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -162,8 +145,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <h3>Haunted Night</h3>
-                    <p>November 1, 2025</p> -->
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -174,8 +155,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <h3>Tequila Thursday</h3>
-                    <p>Zeytoon Lounge</p> -->
                 </div>
             </div>
         </div>
@@ -193,114 +172,159 @@
     <section id="events" class="events">
         <div class="container">
             <h2>Rate Card</h2>
-            <div class="events-list">
-                <!-- Hourly Set Card -->
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <div class="event-details">
-                            <h3>Hourly Set</h3>
-                            <p>1-hour live performance</p>
-                        </div>
-                        <div class="event-date">
-                            <div class="day">$200</div>
-                            <div class="month">per hour</div>
-                        </div>
-                    </div>
-                    <div class="event-info">
-                        <p><i class="fas fa-clock"></i> 1 hour set</p>
-                        <p><i class="fas fa-music"></i> Live Performance</p>
-                    </div>
-                    <a href="#contact" class="event-cta">Book Now</a>
-                </div>
-
-                <!-- Event Package Card -->
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <div class="event-details">
-                            <h3>Event Package</h3>
-                            <p>3-hour event performance</p>
-                        </div>
-                        <div class="event-date">
-                            <div class="day">$300</div>
-                            <div class="month">per event</div>
-                        </div>
-                    </div>
-                    <div class="event-info">
-                        <p><i class="fas fa-clock"></i> 3 hour set</p>
-                        <p><i class="fas fa-music"></i> Event Performance</p>
-                    </div>
-                    <a href="#contact" class="event-cta">Book Now</a>
-                </div>
-
-                <!-- Extended Night Card -->
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <div class="event-details">
-                            <h3>Extended Night</h3>
-                            <p>4-6 hours DJ set</p>
-                        </div>
-                        <div class="event-date">
-                            <div class="day">$450</div>
-                            <div class="month">per night</div>
-                        </div>
-                    </div>
-                    <div class="event-info">
-                        <p><i class="fas fa-clock"></i> 4-6 hour set</p>
-                        <p><i class="fas fa-music"></i> Extended DJ Set</p>
-                    </div>
-                    <a href="#contact" class="event-cta">Book Now</a>
-                </div>
-
-                <!-- Festival / Corporate Card -->
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <div class="event-details">
-                            <h3>Festival / Corporate</h3>
-                            <p>Full-day, brand-aligned performance</p>
-                        </div>
-                        <div class="event-date">
-                            <div class="day">Quote</div>
-                            <div class="month">On Request</div>
-                        </div>
-                    </div>
-                    <div class="event-info">
-                        <p><i class="fas fa-calendar-day"></i> Full-day performance</p>
-                        <p><i class="fas fa-handshake"></i> Brand-aligned</p>
-                    </div>
-                    <a href="#contact" class="event-cta">Get a Custom Quote</a>
-                </div>
+            <div class="rate-card-lock-overlay" id="rateCardLock">
+                <i class="fas fa-lock lock-icon"></i>
+                <p class="lock-prompt">Are you serious? Enter the secret code to view rates.</p>
+                <input type="text" id="unlockCode" class="lock-input" placeholder="OUTSIDER" maxlength="8">
             </div>
-
-            <div class="rate-card-details">
-                <!-- Transport & Logistics -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <h3>TRANSPORT & LOGISTICS</h3>
-                        <i class="fas fa-chevron-down"></i>
+            <div id="rateCardContent" class="rate-card-content">
+                <div class="events-list">
+                    <!-- Hourly Set Card -->
+                    <div class="event-card">
+                        <div class="event-card-header">
+                            <div class="event-details">
+                                <h3>Hourly Set</h3>
+                                <p>1-hour live performance</p>
+                            </div>
+                            <div class="event-date">
+                                <div class="day">$200</div>
+                                <div class="month">per hour</div>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <p><i class="fas fa-clock"></i> 1 hour set</p>
+                            <p><i class="fas fa-music"></i> Live Performance</p>
+                        </div>
+                        <a href="#contact" class="event-cta">Book Now</a>
                     </div>
-                    <div class="accordion-content">
+
+                    <!-- Event Package Card -->
+                    <div class="event-card">
+                        <div class="event-card-header">
+                            <div class="event-details">
+                                <h3>Event Package</h3>
+                                <p>3-hour event performance</p>
+                            </div>
+                            <div class="event-date">
+                                <div class="day">$300</div>
+                                <div class="month">per event</div>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <p><i class="fas fa-clock"></i> 3 hour set</p>
+                            <p><i class="fas fa-music"></i> Event Performance</p>
+                        </div>
+                        <a href="#contact" class="event-cta">Book Now</a>
+                    </div>
+
+                    <!-- Extended Night Card -->
+                    <div class="event-card">
+                        <div class="event-card-header">
+                            <div class="event-details">
+                                <h3>Extended Night</h3>
+                                <p>4-6 hours DJ set</p>
+                            </div>
+                            <div class="event-date">
+                                <div class="day">$450</div>
+                                <div class="month">per night</div>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <p><i class="fas fa-clock"></i> 4-6 hour set</p>
+                            <p><i class="fas fa-music"></i> Extended DJ Set</p>
+                        </div>
+                        <a href="#contact" class="event-cta">Book Now</a>
+                    </div>
+
+                    <!-- Festival / Corporate Card -->
+                    <div class="event-card">
+                        <div class="event-card-header">
+                            <div class="event-details">
+                                <h3>Festival / Corporate</h3>
+                                <p>Full-day, brand-aligned performance</p>
+                            </div>
+                            <div class="event-date">
+                                <div class="day">Quote</div>
+                                <div class="month">On Request</div>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <p><i class="fas fa-calendar-day"></i> Full-day performance</p>
+                            <p><i class="fas fa-handshake"></i> Brand-aligned</p>
+                        </div>
+                        <a href="#contact" class="event-cta">Get a Custom Quote</a>
+                    </div>
+                </div>
+
+                <div class="rate-card-details">
+                    <!-- Transport & Logistics -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h3>TRANSPORT & LOGISTICS</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><i class="fas fa-truck"></i> Within Nairobi – Transport included (safe and accessible venue required)</li>
+                                <li><i class="fas fa-plane-departure"></i> Outside Nairobi (Kenya) – Transport, accommodation, and meals covered by promoter</li>
+                                <li><i class="fas fa-globe-americas"></i> Outside Kenya (International) – Airfare, transfers, accommodation, and meals covered (+ $50/day per diem)</li>
+                                <li><i class="fas fa-cogs"></i> Equipment Setup – Promoter provides full setup (CDJs, Mixer, Monitors, Mic)</li>
+                                <li><i class="fas fa-toolbox"></i> Own Equipment Option – Ariel can bring setup for $80/event</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Media, Filming & Promotion -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h3>MEDIA, FILMING & PROMOTION</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><i class="fas fa-video"></i> Filming allowed with prior consent</li>
+                                <li><i class="fas fa-copyright"></i> Ariel retains co-usage rights for recorded content</li>
+                                <li><i class="fas fa-hashtag"></i> All posts must tag @prodbyariell</li>
+                                <li><i class="fas fa-compact-disc"></i> Promo mixes or reels available at $50/clip</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Payment & Booking Terms -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h3>PAYMENT & BOOKING TERMS</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><i class="fas fa-money-bill-wave"></i> Currency: USD / KES</li>
+                                <li><i class="fas fa-credit-card"></i> Payment Methods: M-Pesa, Cash, Bank Transfer</li>
+                                <li><i class="fas fa-hand-holding-usd"></i> Deposit: 50% required to confirm booking</li>
+                                <li><i class="fas fa-balance-scale"></i> Balance: Payable before performance</li>
+                                <li><i class="fas fa-ban"></i> Cancellation: 48-hour notice (deposit non-refundable)</li>
+                                <li><i class="fas fa-file-invoice"></i> Corporate Bookings: Invoices available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rate-card-details">
+                    <!-- Transport & Logistics -->
+                    <div class="detail-section">
+                        <h3>TRANSPORT & LOGISTICS</h3>
                         <ul>
-                            <li><i class="fas fa-truck"></i> Within Nairobi – Transport included (safe and accessible
-                                venue required)</li>
-                            <li><i class="fas fa-plane-departure"></i> Outside Nairobi (Kenya) – Transport,
-                                accommodation, and meals covered by promoter</li>
-                            <li><i class="fas fa-globe-americas"></i> Outside Kenya (International) – Airfare,
-                                transfers, accommodation, and meals covered (+ $50/day per diem)</li>
-                            <li><i class="fas fa-cogs"></i> Equipment Setup – Promoter provides full setup (CDJs, Mixer,
-                                Monitors, Mic)</li>
-                            <li><i class="fas fa-toolbox"></i> Own Equipment Option – Ariel can bring setup for
-                                $80/event</li>
+                            <li><i class="fas fa-truck"></i> Within Nairobi – Transport included (safe and accessible venue required)</li>
+                            <li><i class="fas fa-plane-departure"></i> Outside Nairobi (Kenya) – Transport, accommodation, and meals covered by promoter</li>
+                            <li><i class="fas fa-globe-americas"></i> Outside Kenya (International) – Airfare, transfers, accommodation, and meals covered (+ $50/day per diem)</li>
+                            <li><i class="fas fa-cogs"></i> Equipment Setup – Promoter provides full setup (CDJs, Mixer, Monitors, Mic)</li>
+                            <li><i class="fas fa-toolbox"></i> Own Equipment Option – Ariel can bring setup for $80/event</li>
                         </ul>
                     </div>
-                </div>
 
-                <!-- Media, Filming & Promotion -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <!-- Media, Filming & Promotion -->
+                    <div class="detail-section">
                         <h3>MEDIA, FILMING & PROMOTION</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
                         <ul>
                             <li><i class="fas fa-video"></i> Filming allowed with prior consent</li>
                             <li><i class="fas fa-copyright"></i> Ariel retains co-usage rights for recorded content</li>
@@ -308,15 +332,10 @@
                             <li><i class="fas fa-compact-disc"></i> Promo mixes or reels available at $50/clip</li>
                         </ul>
                     </div>
-                </div>
 
-                <!-- Payment & Booking Terms -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <!-- Payment & Booking Terms -->
+                    <div class="detail-section">
                         <h3>PAYMENT & BOOKING TERMS</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
                         <ul>
                             <li><i class="fas fa-money-bill-wave"></i> Currency: USD / KES</li>
                             <li><i class="fas fa-credit-card"></i> Payment Methods: M-Pesa, Cash, Bank Transfer</li>
@@ -328,49 +347,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="rate-card-details">
-            <!-- Transport & Logistics -->
-            <div class="detail-section">
-                <h3>TRANSPORT & LOGISTICS</h3>
-                <ul>
-                    <li><i class="fas fa-truck"></i> Within Nairobi – Transport included (safe and accessible venue
-                        required)</li>
-                    <li><i class="fas fa-plane-departure"></i> Outside Nairobi (Kenya) – Transport, accommodation, and
-                        meals covered by promoter</li>
-                    <li><i class="fas fa-globe-americas"></i> Outside Kenya (International) – Airfare, transfers,
-                        accommodation, and meals covered (+ $50/day per diem)</li>
-                    <li><i class="fas fa-cogs"></i> Equipment Setup – Promoter provides full setup (CDJs, Mixer,
-                        Monitors, Mic)</li>
-                    <li><i class="fas fa-toolbox"></i> Own Equipment Option – Ariel can bring setup for $80/event</li>
-                </ul>
-            </div>
-
-            <!-- Media, Filming & Promotion -->
-            <div class="detail-section">
-                <h3>MEDIA, FILMING & PROMOTION</h3>
-                <ul>
-                    <li><i class="fas fa-video"></i> Filming allowed with prior consent</li>
-                    <li><i class="fas fa-copyright"></i> Ariel retains co-usage rights for recorded content</li>
-                    <li><i class="fas fa-hashtag"></i> All posts must tag @prodbyariell</li>
-                    <li><i class="fas fa-compact-disc"></i> Promo mixes or reels available at $50/clip</li>
-                </ul>
-            </div>
-
-            <!-- Payment & Booking Terms -->
-            <div class="detail-section">
-                <h3>PAYMENT & BOOKING TERMS</h3>
-                <ul>
-                    <li><i class="fas fa-money-bill-wave"></i> Currency: USD / KES</li>
-                    <li><i class="fas fa-credit-card"></i> Payment Methods: M-Pesa, Cash, Bank Transfer</li>
-                    <li><i class="fas fa-hand-holding-usd"></i> Deposit: 50% required to confirm booking</li>
-                    <li><i class="fas fa-balance-scale"></i> Balance: Payable before performance</li>
-                    <li><i class="fas fa-ban"></i> Cancellation: 48-hour notice (deposit non-refundable)</li>
-                    <li><i class="fas fa-file-invoice"></i> Corporate Bookings: Invoices available</li>
-                </ul>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -404,7 +380,6 @@
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <!-- fbjbjbfbfjjeffj -->
                             <h3>Location</h3>
                             <p>Nairobi, Kenya</p>
                         </div>
@@ -420,15 +395,11 @@
                     </div>
                 </div>
                 <form class="contact-form" name="contact" method="POST" data-netlify="true">
-                    <!-- <input type="hidden" name="_next" value="/success.html"> -->
-                    <!-- <input type="hidden" name="_to" value="frchianu5@gmail.com"> -->
                     <input type="hidden" name="form-name" value="contact">
-
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="text" name="subject" placeholder="Event Type" required>
                     <textarea name="message" placeholder="Tell me about your event..." rows="5" required></textarea>
-
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
@@ -453,6 +424,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/rate-card-lock.js"></script>
 </body>
 
 </html>
